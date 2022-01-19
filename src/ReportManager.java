@@ -83,7 +83,7 @@ public class ReportManager {
 		this.totalDays = 365;
 		
 		this.currentAmount = 0;
-		this.totalAmount = 300;
+		this.totalAmount = 100;
 		
 		this.userOneName = "User 1";
 		this.userOneWork = 0;
