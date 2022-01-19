@@ -68,23 +68,23 @@ public class DataPanel extends GridPane {
 		
 		// Table Column Labels
 		TableColumn<Report, LocalDate> day = new TableColumn<Report, LocalDate>("Date");
-		day.setMinWidth(199);
-		day.setPrefWidth(199);
+		day.setMinWidth(183);
+		day.setPrefWidth(183);
 		day.setResizable(false);
 		day.setStyle("-fx-alignment: CENTER;");
 		day.setCellValueFactory(new PropertyValueFactory<Report, LocalDate>("date"));
 		
 		TableColumn<Report, Integer> userOneContribution = new TableColumn<Report, Integer>(String.format("%s's Contribution", ReportManager.getInstance().getUserOneName()));
-		userOneContribution.setMinWidth(174);
-		userOneContribution.setPrefWidth(174);
+		userOneContribution.setMinWidth(182);
+		userOneContribution.setPrefWidth(182);
 		userOneContribution.setResizable(false);
 		userOneContribution.setStyle("-fx-alignment: CENTER;");
 		userOneContribution.setCellValueFactory(new PropertyValueFactory<Report, Integer>("userOneWork"));
 		contributionColumns.put("userOne", userOneContribution);
 		
 		TableColumn<Report, Integer> userTwoContribution = new TableColumn<Report, Integer>(String.format("%s's Contribution", ReportManager.getInstance().getUserTwoName()));
-		userTwoContribution.setMinWidth(175);
-		userTwoContribution.setPrefWidth(175);
+		userTwoContribution.setMinWidth(183);
+		userTwoContribution.setPrefWidth(183);
 		userTwoContribution.setResizable(false);
 		userTwoContribution.setStyle("-fx-alignment: CENTER;");
 		userTwoContribution.setCellValueFactory(new PropertyValueFactory<Report, Integer>("userTwoWork"));
@@ -99,14 +99,14 @@ public class DataPanel extends GridPane {
 		
 		// Date picker
 		datePicker = new DatePicker();
-		datePicker.setMinSize(197, 30);
-		datePicker.setPrefSize(197, 30);
+		datePicker.setMinSize(180, 30);
+		datePicker.setPrefSize(180, 30);
 		datePicker.setPromptText("Date To Report");
 		
 		// TextFields
 		userOnePercentage = new TextField();
-		userOnePercentage.setMinSize(169, 30);
-		userOnePercentage.setPrefSize(169, 30);
+		userOnePercentage.setMinSize(178, 30);
+		userOnePercentage.setPrefSize(178, 30);
 		userOnePercentage.setPromptText(String.format("%s's Work %%", ReportManager.getInstance().getUserOneName()));
 		// force the alexPercentage TextField to be numeric only
 		userOnePercentage.textProperty().addListener((ChangeListener<? super String>) new ChangeListener<String>() {
@@ -120,8 +120,8 @@ public class DataPanel extends GridPane {
 		});
 		
 		userTwoPercentage = new TextField();
-		userTwoPercentage.setMinSize(172, 30);
-		userTwoPercentage.setPrefSize(172, 30);
+		userTwoPercentage.setMinSize(180, 30);
+		userTwoPercentage.setPrefSize(180, 30);
 		userTwoPercentage.setPromptText(String.format("%s's Work %%", ReportManager.getInstance().getUserTwoName()));
 		// Force the arthurPercentage TextField to be numeric only
 		userTwoPercentage.textProperty().addListener((ChangeListener<? super String>) new ChangeListener<String>() {
@@ -176,6 +176,10 @@ public class DataPanel extends GridPane {
 						ReportManager.getInstance().addReport(newReport);
 						RankingPanel.getInstance().updateInfo();
 						ReportManager.getInstance().saveToFile();
+						
+						this.datePicker.getEditor().clear();
+						this.userOnePercentage.clear();
+						this.userTwoPercentage.clear();
 					}
 				} else {
 					// Check if date already used and if percent add up to 100
