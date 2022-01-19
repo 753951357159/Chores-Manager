@@ -16,4 +16,4 @@ Settings are available to change:
 There is an option to **reset all data**, changing all values back to the default value and removing all reports. This will allow users to restart from the beginning once the current run is over.
 
 ## Downloading & Running
-Prebuilt binaries are available for Windows through the [Releases Page](https://github.com/753951357159/Chores-Manager/releases). There are two versions of the application, one that contains a JRE (Java Runtime Environment) and one that does not. If JRE is already installed on the computer and you want to save space, just download the one that isn't bundled with a JRE.
+Prebuilt binaries are available for Windows through the [Releases Page](https://github.com/753951357159/Chores-Manager/releases).
