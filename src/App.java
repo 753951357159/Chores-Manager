@@ -10,7 +10,7 @@ public class App extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// Set title, icon, default size, and options of window
-		primaryStage.setTitle("Dish Washing Manager");
+		primaryStage.setTitle("Chores Manager");
 		primaryStage.getIcons().add(new Image(App.class.getResourceAsStream("logo.png")));
 		primaryStage.setAlwaysOnTop(false);
 		

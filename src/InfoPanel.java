@@ -13,9 +13,9 @@ public class InfoPanel extends GridPane {
 	private static InfoPanel instance;
 	
 	private final ImageView logoImg = new ImageView(new Image(InfoPanel.class.getResourceAsStream("logo.png")));
-	private final Text appName = new Text("Dish Washing Manager");
-	private final Text ver = new Text("Version 0.1.0");
-	private final Text dev = new Text("Created using Java\nDeveloped by Alexander Feng");
+	private final Text appName = new Text("Chores Manager");
+	private final Text ver = new Text("Version 1.0.0");
+	private final Text dev = new Text("Created using JavaFX\nDeveloped by Alexander F.");
 	
 	private InfoPanel() {
 		// Set alignment and gap between cells
