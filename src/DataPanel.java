@@ -71,12 +71,14 @@ public class DataPanel extends GridPane {
 		day.setMinWidth(199);
 		day.setPrefWidth(199);
 		day.setResizable(false);
+		day.setStyle("-fx-alignment: CENTER;");
 		day.setCellValueFactory(new PropertyValueFactory<Report, LocalDate>("date"));
 		
 		TableColumn<Report, Integer> userOneContribution = new TableColumn<Report, Integer>(String.format("%s's Contribution", ReportManager.getInstance().getUserOneName()));
 		userOneContribution.setMinWidth(174);
 		userOneContribution.setPrefWidth(174);
 		userOneContribution.setResizable(false);
+		userOneContribution.setStyle("-fx-alignment: CENTER;");
 		userOneContribution.setCellValueFactory(new PropertyValueFactory<Report, Integer>("userOneWork"));
 		contributionColumns.put("userOne", userOneContribution);
 		
@@ -84,6 +86,7 @@ public class DataPanel extends GridPane {
 		userTwoContribution.setMinWidth(175);
 		userTwoContribution.setPrefWidth(175);
 		userTwoContribution.setResizable(false);
+		userTwoContribution.setStyle("-fx-alignment: CENTER;");
 		userTwoContribution.setCellValueFactory(new PropertyValueFactory<Report, Integer>("userTwoWork"));
 		contributionColumns.put("userTwo", userTwoContribution);
 		
